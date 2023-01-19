@@ -1,70 +1,73 @@
-# Getting Started with Create React App
+# 프론트엔드 개발자 과제
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 프로젝트 실행
 
-## Available Scripts
+```
+npm ci
+npm run start
+```
 
-In the project directory, you can run:
+`npm ci`: 패키지 설치   
+`npm run start`: 프로젝트 실행   
 
-### `npm start`
+## Directory Structure
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+```bash
+├─ public
+└─ src
+    ├─ assets
+    |   ├─ css
+    |   ├─ fonts
+    |   ├─ img
+    |   ├─ scss
+    |   └─ sound
+    ├─ common
+    |   ├─ components
+    |   ├─ containers
+    |   └─ util
+    ├─ home
+    |   ├─ components
+    |   └─ containers
+    └─ store
+```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+`assets` : 각종 이미지, 스타일, 폰트, 소리 파일 등 Asset을 위한 Directory   
+`common` : 공통 컴포넌트 및 Util 관련 Directory   
+`home` : 프로젝터 첫 시작 Blank 화면 관련 Directory   
+`store` : Redux State Store Directory (내부에 Mockup.js 파일 안에 Mockup Data가 존재)   
 
-### `npm test`
+## 요구 사항
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+과제에 대한 상세내용은 PPT 파일 참조
 
-### `npm run build`
+### 과제 1
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+이벤트 유형과 이벤트 필드 CRUD 화면 구현
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+* (1)과 (2)를 탭 UI로 구성
+* (1)과 (2)의 사용된 테이블 UI를 공통 컴포넌트로 구현
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+#### (1) 이벤트 유형 CRUD
 
-### `npm run eject`
+* /src/store/Mockup.js에 eventTypeList Mockup Data를 참조하여 이벤트 유형 CRUD 하는 화면 구현
+* 이벤트 유형 추가 기능은 추가 버튼 클릭 시 Modal 로 구현
+* 동일한 유형 ID로 이벤트 유형이 존재할 수 없음
+* 삭제 시 삭제할 것인지 여부 확인 후 삭제
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+#### (2) 이벤트 필드 CRUD
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+* /src/store/Mockup.js에 eventFieldList Mockup Data를 참조하여 이벤트 필드 CRUD 하는 화면 구현
+* 이벤트 필드 추가 기능은 추가 버튼 클릭 시 Modal 로 구현
+* 동일한 필드명으로 이벤트 필드가 존재할 수 없음
+* 삭제 시 삭제할 것인지 여부 확인 후 삭제
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### 과제 2
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Directory 탐색기 구현
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+* /src/store/Mockup.js 에 directories Mockup Data 를 참조하여 Directory 탐색기 구현
+* Directory 추가 및 File 추가 기능은 추가 버튼 클릭 시 Modal 로 구현
+* 동일한 경로에 동일한 이름의 Directory 및 File 이 존재할 수 없음
+* Directory 수정 시 Directory 이름만 수정
+* 삭제 시 삭제할 것인지 여부 확인 후 삭제
+* Directory 에 Sub Directory 가 있거나 File 이 있는 경우 삭제 불가능 하도록 조치
