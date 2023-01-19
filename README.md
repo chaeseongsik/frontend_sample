@@ -40,7 +40,7 @@ npm run start
 
 과제에 대한 상세내용은 PPT 파일 참조
 
-### 과제 2
+### 과제
 
 Directory 탐색기 구현
 
