@@ -1,0 +1,83 @@
+/*
+ * It is advised not to edit the smartadmin_production.css
+ * as this will override any changes you make in the 
+ * later versions of this theme. 
+ * 
+ * We advise that you use use this CSS to override 
+ * SmartAdmin styles. 
+ * 
+ * Rename the stylesheet to whatever your liking so it will stay
+ * unique to you with each update of SmartAdmin.
+ */
+
+/*
+ * INDEX
+ * 
+ * - HTML
+ * - BODY
+ * - CUSTOM STYLES
+ */
+
+.login-link, .smart-form .login-link {
+  margin-top: 6px;
+  padding: 0 1px;
+  font-size: 11px;
+  font-weight: 100;
+  line-height: 15px;
+}
+
+.smart-form .login-link a {
+  font-size: 13px;
+  color: #fff;
+}
+
+.smart-form .login-link a:hover {
+  color: #f8fb3f;
+}
+
+.request-container {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - (40px + 52px));
+}
+
+.request-box {
+  position: absolute;
+  width: 742px;
+  height: 280px;
+  top: calc((100vh - (40px + 52px + 280px + 50px)) / 2);
+  left: calc((100vw - 742px) / 2);
+  margin: auto;
+}
+
+.request-title {
+  font-weight: 600 !important;
+  padding-left: 20px;
+}
+
+.request-content {
+  font-weight: 500 !important;
+  padding-left: 20px;
+  color: #333333;
+}
+
+.request-button {
+  padding-top: 40px;
+  padding-bottom: 10px;
+  padding-left: 20px;
+}
+
+.form-request-container {
+  position: relative;
+  width: 100%;
+  min-height: calc(100vh - (40px + 52px));
+}
+
+.form-request-box {
+  position: absolute;
+  width: 500px;
+  height: 363px;
+  top: calc((100vh - (40px + 52px + 363px + 50px)) / 2);
+  left: calc((100vw - 500px) / 2);
+  margin: auto;
+}
